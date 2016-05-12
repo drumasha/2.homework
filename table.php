@@ -17,8 +17,8 @@
 			echo "Deleting row with id:".$_GET["delete"];
 			
 			// NOW () = current date-time
-			$stmt = $mysql->prepare("UPDATE table.php SET deleted=NOW() WHERE id = ?");
-			
+			$stmt = $mysql->prepare("UPDATE Color_Messages SET deleted = NOW() WHERE id = ?");
+			echo $mysql->error;
 			// replace the ?. The i here is an integer for the id number
 			
 			$stmt->bind_param ("i", $_GET["delete"]);
@@ -43,7 +43,7 @@
 	echo $mysql->error;
 	
 	//variable for data for each row we will get
-	$stmt->bind_result($id, $Color, $To, $From, $Message);
+	$stmt->bind_result($id, $Color, $From, $To, $Message);
 	//query
 	$stmt->execute ();
 	
@@ -59,6 +59,7 @@
 		$table_html .= "<th>From</th>"; //table header
 		$table_html .= "<th>To</th>"; //table header
 		$table_html .= "<th>Message</th>"; //table header
+		$table_html .= "<th>Delete?</th>";
 	$table_html .= "</tr>"; //table row closing
 	
 	// GET RESULTS
@@ -98,7 +99,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li> <a href="applic.php">App</a></li>
-		<li class="active"><a href="table.php"> Current</a></li>
+		<li class="active"><a href="table.php"> Table</a></li>
           </ul>
     
     </div><!-- /.navbar-collapse -->
@@ -109,10 +110,6 @@
 	
 		<h1> Messages </h1>
 		<?php echo $table_html; ?>
-
-
-
-
 
 
   </body>
