@@ -2,23 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Color Messages</title>
-	
-		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
-		<!-- Optional theme -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" >
-		<!-- jQuery google -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-		<!-- Latest compiled and minified JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" ></script>
-		
-  </head>
   
  <?php require_once ("header.php"); ?>
 <?php
@@ -90,7 +74,7 @@
 	// ? was everything okay
 	if($everything_was_okay == true){
 		
-		echo "Sending Message ...";
+		
 		
 		//connection with username and password
 		//access username from config
@@ -138,13 +122,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">LindyMash</a>
+      <a class="navbar-brand" href="#">Color Messages</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="applic.php">App page <span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="applic.php">App<span class="sr-only">(current)</span></a></li>
       <li><a href="table.php">Table <span class="sr-only">(current)</span></a></li>
    
      
@@ -158,7 +142,7 @@
 
 <!--This is the save button -->
  <h1>Homework app</h1>
-
+<p>Send personalized coloful messages!
 <div class="container">
 
 
@@ -170,7 +154,7 @@
 				<div class="col-md-3 col-sm-6">
 					<div class="form-group">
                         <label for="from">Color: </label>
-                        <input type="text" name="color"
+                        <input type="text" name="Color"
                             class="form-control">
                     </div>
 				</div>
@@ -180,7 +164,7 @@
 				<div class="col-md-3 col-sm-6">
 					<div class="form-group">
                         <label for="from">From: </label>
-                        <input type="text" name="from"
+                        <input type="text" name="From"
                             class="form-control">
                     </div>
 				</div>
@@ -190,7 +174,7 @@
 				<div class="col-md-3 col-sm-6">
 					<div class="form-group">
                     <label for="to">To: </label>
-                    <input type="text" name="to"
+                    <input type="text" name="To"
                                  class="form-control">
                     </div>
 				</div>
@@ -200,7 +184,7 @@
 				<div class="col-md-3 col-sm-6">
 					<div class="form-group">
                         <label for="message">Message: </label>
-                        <input type="text" name="message"
+                        <input type="text" name="Message"
                         class="form-control">
                     </div>
 				</div>
