@@ -35,7 +35,7 @@
 	
 	
 	//SQL sentence // to show all results, remove ORDER 
-	$stmt = $mysql->prepare("SELECT `id`, `Color`, `From`, `To`, `Message` FROM `Color_Messages` ");
+	$stmt = $mysql->prepare("SELECT `id`, `Color`, `From`, `To`, `Message` FROM `Color_Messages` WHERE deleted IS NULL ORDER by id");
 	
 	
 	
@@ -92,14 +92,16 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Color Messages</a>
+      <a class="navbar-brand" href="applic.php"><strong>Color Messages</strong></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li> <a href="applic.php">App</a></li>
-		<li class="active"><a href="table.php"> Table</a></li>
+		<li class="active"><a href="table.php"> Table</a><span class="sr-only">(current)</span></a></li>
+		 <!-- <li class="active"><a href="my_mess.php">My messages<span class="sr-only">(current)</span></a></li> -->
+
           </ul>
     
     </div><!-- /.navbar-collapse -->
@@ -110,7 +112,6 @@
 	
 		<h1> Messages </h1>
 		<?php echo $table_html; ?>
-
 
   </body>
 </html>
